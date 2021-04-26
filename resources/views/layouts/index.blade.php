@@ -64,9 +64,9 @@
 				<li>
 					<a class="waves-effect parent-item js__control" href="#"><i class="menu-icon mdi mdi-flower"></i><span>User DashBoard</span><span class="menu-arrow fa fa-angle-down"></span></a>
 					<ul class="sub-menu js__content">
-						@if(session()->has('user'))
+						
 						<li><a href="list">View Registered User</a></li>
-						@endif
+						
 						
 					</ul>
 					<!-- /.sub-menu js__content -->

@@ -69,8 +69,7 @@ class LoginController extends Controller
   
     public function List()
     {
-         $data=Admin::all();
-         return view('list',['data'=>$data]);
+         return view('list');
     }
 
    
@@ -84,4 +83,5 @@ class LoginController extends Controller
         return redirect('/')->with('success', 'Profile updated');
        
     }
+
 }

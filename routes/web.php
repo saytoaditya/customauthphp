@@ -20,12 +20,18 @@ use App\Http\Controllers\LoginController;
 // });
 // Route::view('/','index');
 
+
+
 Route::view('/','home');
-Route::view('login','auth.login');
-Route::view('register','auth.register');
 Route::post('register',[LoginController::class,'register']);
 Route::post('login',[LoginController::class,'login']);
 Route::get('logout',[LoginController::class,'logout']);
 Route::view('profile','profile');
-
 Route::post('update',[LoginController::class,'update']);
+
+Route::middleware([AuthCheck::class])->group(function(){
+    Route::get('list ',[LoginController::class,'list']);
+    Route::view('login','auth.login');
+    Route::view('register','auth.register');
+    
+});

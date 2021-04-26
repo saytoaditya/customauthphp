@@ -73,12 +73,7 @@ class LoginController extends Controller
          return view('list',['data'=>$data]);
     }
 
-    // public function edit($id)
-    // {   
-    //     $edit= Admin::find($id);
-    //     // return $edit;
-    //     return view('profile',['edit'=>$edit]);
-    // }
+   
     public function update(Request $req)
     { 
         $profile=Admin::where(['id'=> session()->get('user')['id']])->first();
